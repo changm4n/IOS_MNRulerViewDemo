@@ -8,7 +8,31 @@
 
 #import "MNRulerTableView.h"
 
+
+@interface MNRulerTableView (){
+  
+}
+
+@end
 @implementation MNRulerTableView
+
+-(instancetype)initWithFrame:(CGRect)frame{
+  self = [super initWithFrame:frame];
+  if (self) {
+    self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.rowHeight = 60;
+    
+  }
+  return self;
+}
+
+-(void)setRowHeight:(CGFloat)rowHeight{
+  self.rowHeight = rowHeight;
+}
+
+
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -9,7 +9,7 @@
 #import "MNRulerView.h"
 #import "MNRulerTableView.h"
 #define DEGREES_TO_RADIANS(x) (M_PI * (x) / 180.0)
-@interface MNRulerView (){
+@interface MNRulerView () <UITableViewDelegate,UITableViewDataSource>{
   
 }
 
@@ -22,13 +22,15 @@
   
   CGFloat w = frame.size.width;
   CGFloat h = frame.size.height;
-  _tableView = [[MNRulerTableView alloc]initWithFrame:CGRectMake(w/2-h/2,h/2-w/2, h, w) style:UITableViewStylePlain];
-  _tableView.backgroundColor = [UIColor redColor];
+  _tableView = [[MNRulerTableView alloc]initWithFrame:CGRectMake(w/2-h/2,h/2-w/2, h, w)];
+  _tableView.backgroundColor = [UIColor orangeColor];
   
   CGAffineTransform rotate = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(270));
   rotate = CGAffineTransformScale(rotate,1,1);
   [_tableView setTransform:rotate];
 
+  _tableView.delegate = self;
+  _tableView.dataSource = self;
   
   [self addSubview:_tableView];
   
@@ -51,6 +53,26 @@
   }
   
   return self;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  return 1;
+  
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+  static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleTableIdentifier];
+  if(cell ==nil){
+    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
+  }
+  cell.backgroundColor = [UIColor whiteColor];
+  return cell;
 }
 
 /*
