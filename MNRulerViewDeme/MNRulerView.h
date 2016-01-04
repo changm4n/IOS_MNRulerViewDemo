@@ -8,6 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MNRulerView : UIView
+
+
+@class MNRulerView;
+
+
+@protocol MNRulerViewDelegate <NSObject>
+@optional
+- (NSInteger)MNRulerPickerView:(MNRulerView*)MNRulerPickerView titleForRow:(NSInteger)row;
+-(void)MNRulerPickerView:(MNRulerView*)MNRulerPickerView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+-(CGFloat)rowHeightForMNRulerPickerView:(MNRulerView*)MNRulerPickerView;
 
 @end
+
+@interface MNRulerView : UIView
+
+
+
+-(void)setIndicatorView:(UIView *)view;
+
+
+@property (nonatomic, weak) id <MNRulerViewDelegate> delegate;
+
+
+@end
+
+

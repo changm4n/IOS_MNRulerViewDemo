@@ -16,6 +16,7 @@
 		37A80ECB1C33A7E600E66A30 /* MNRulerViewDemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A80ECA1C33A7E600E66A30 /* MNRulerViewDemeTests.m */; };
 		37A80ED71C33AAF400E66A30 /* MNRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A80ED61C33AAF400E66A30 /* MNRulerView.m */; };
 		37A80EDA1C33AB0D00E66A30 /* MNRulerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A80ED91C33AB0D00E66A30 /* MNRulerTableView.m */; };
+		37CADE831C34C81200E06E1E /* MNRulerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CADE821C34C81200E06E1E /* MNRulerTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		37A80ED61C33AAF400E66A30 /* MNRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNRulerView.m; sourceTree = "<group>"; };
 		37A80ED81C33AB0D00E66A30 /* MNRulerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNRulerTableView.h; sourceTree = "<group>"; };
 		37A80ED91C33AB0D00E66A30 /* MNRulerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNRulerTableView.m; sourceTree = "<group>"; };
+		37CADE811C34C81200E06E1E /* MNRulerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNRulerTableViewCell.h; sourceTree = "<group>"; };
+		37CADE821C34C81200E06E1E /* MNRulerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNRulerTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				37A80ED61C33AAF400E66A30 /* MNRulerView.m */,
 				37A80ED81C33AB0D00E66A30 /* MNRulerTableView.h */,
 				37A80ED91C33AB0D00E66A30 /* MNRulerTableView.m */,
+				37CADE811C34C81200E06E1E /* MNRulerTableViewCell.h */,
+				37CADE821C34C81200E06E1E /* MNRulerTableViewCell.m */,
 			);
 			name = MNRulerView;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				37A80ED71C33AAF400E66A30 /* MNRulerView.m in Sources */,
 				37A80EB71C33A7E600E66A30 /* ViewController.m in Sources */,
 				37A80EB41C33A7E600E66A30 /* AppDelegate.m in Sources */,
+				37CADE831C34C81200E06E1E /* MNRulerTableViewCell.m in Sources */,
 				37A80EDA1C33AB0D00E66A30 /* MNRulerTableView.m in Sources */,
 				37A80EB11C33A7E600E66A30 /* main.m in Sources */,
 			);
@@ -438,6 +444,7 @@
 				37A80ED01C33A7E600E66A30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37A80ED11C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemeTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +453,7 @@
 				37A80ED31C33A7E600E66A30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

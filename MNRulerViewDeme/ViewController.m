@@ -7,18 +7,36 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "MNRulerView.h"
+@interface ViewController () <MNRulerViewDelegate>
+@property (strong, nonatomic) IBOutlet MNRulerView *ruler;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  
+  _ruler.delegate = self;
+  
+  
+  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 30)];
+  view.backgroundColor = [UIColor redColor];
+  view.alpha = 0.5;
+  [_ruler setIndicatorView:view];
   // Do any additional setup after loading the view, typically from a nib.
 }
-
+- (void)MNRulerPickerView:(MNRulerView*)MNRulerPickerView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+  
+  _label.text = [NSString stringWithFormat:@"%0.1f cm",(float)indexPath.row/10];
+  
+  
+  
+}
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
