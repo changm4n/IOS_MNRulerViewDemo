@@ -41,7 +41,7 @@
   
   
   _tableView = [[MNRulerTableView alloc]initWithFrame:CGRectMake(w/2-h/2,h/2-w/2, h, w)];
-  _tableView.backgroundColor = [UIColor orangeColor];
+  
   
   CGAffineTransform rotate = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(270));
   rotate = CGAffineTransformScale(rotate,1,1);
@@ -49,6 +49,9 @@
   
   _tableView.delegate = self;
   _tableView.dataSource = self;
+  
+  _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  _tableView.backgroundColor = [UIColor orangeColor];
   
   
   [self addSubview:_tableView];
@@ -109,7 +112,6 @@
   MNRulerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleTableIdentifier];
   if(cell ==nil){
     cell = [[MNRulerTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    
     
     
     cell.label.frame = CGRectMake(_rowWidth*0.1,(_rowHeight-LABEL_SIZE)/2, LABEL_SIZE , LABEL_SIZE);

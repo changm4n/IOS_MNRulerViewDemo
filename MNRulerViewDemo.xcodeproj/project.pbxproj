@@ -72,8 +72,8 @@
 		37A80EA21C33A7E600E66A30 = {
 			isa = PBXGroup;
 			children = (
-				37A80EAD1C33A7E600E66A30 /* MNRulerViewDeme */,
-				37A80EC71C33A7E600E66A30 /* MNRulerViewDemeTests */,
+				37A80EAD1C33A7E600E66A30 /* MNRulerViewDemo */,
+				37A80EC71C33A7E600E66A30 /* MNRulerViewDemoTests */,
 				37A80EAC1C33A7E600E66A30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37A80EAD1C33A7E600E66A30 /* MNRulerViewDeme */ = {
+		37A80EAD1C33A7E600E66A30 /* MNRulerViewDemo */ = {
 			isa = PBXGroup;
 			children = (
 				37A80EB21C33A7E600E66A30 /* AppDelegate.h */,
@@ -99,6 +99,7 @@
 				37A80EBD1C33A7E600E66A30 /* LaunchScreen.xib */,
 				37A80EAE1C33A7E600E66A30 /* Supporting Files */,
 			);
+			name = MNRulerViewDemo;
 			path = MNRulerViewDeme;
 			sourceTree = "<group>";
 		};
@@ -112,12 +113,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		37A80EC71C33A7E600E66A30 /* MNRulerViewDemeTests */ = {
+		37A80EC71C33A7E600E66A30 /* MNRulerViewDemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				37A80ECA1C33A7E600E66A30 /* MNRulerViewDemeTests.m */,
 				37A80EC81C33A7E600E66A30 /* Supporting Files */,
 			);
+			name = MNRulerViewDemoTests;
 			path = MNRulerViewDemeTests;
 			sourceTree = "<group>";
 		};
