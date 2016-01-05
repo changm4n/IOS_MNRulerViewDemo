@@ -20,7 +20,6 @@
   self = [super initWithFrame:frame];
   if (self) {
     
-//    self.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.allowsSelection = NO;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;

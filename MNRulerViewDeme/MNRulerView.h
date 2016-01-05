@@ -16,7 +16,7 @@
 @protocol MNRulerViewDelegate <NSObject>
 @optional
 - (NSInteger)MNRulerPickerView:(MNRulerView*)MNRulerPickerView titleForRow:(NSInteger)row;
--(void)MNRulerPickerView:(MNRulerView*)MNRulerPickerView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)RulerViewDidScroll:(MNRulerView*)MNRulerPickerView currentValue:(float)value;
 -(CGFloat)rowHeightForMNRulerPickerView:(MNRulerView*)MNRulerPickerView;
 
 @end

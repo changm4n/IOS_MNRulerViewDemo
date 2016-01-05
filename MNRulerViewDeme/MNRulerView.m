@@ -23,6 +23,7 @@
 
 @property (nonatomic) float rowHeight;
 @property (nonatomic) float rowWidth;
+
 @property (nonatomic, strong) MNRulerTableView *tableView;
 
 @end
@@ -78,7 +79,7 @@
   
   CGRect originRect = view.frame;
   originRect.origin.x = ceil((self.frame.size.width - originRect.size.width)/2);
-
+  
   view.frame = originRect;
   [self addSubview:view];
 }
@@ -123,7 +124,7 @@
     cell.small_Line7.frame = CGRectMake(_rowWidth, 80, -(_rowWidth*0.25), 1);
     cell.small_Line8.frame = CGRectMake(_rowWidth, 90, -(_rowWidth*0.25), 1);
     
-    cell.large_Line.frame  = CGRectMake(_rowWidth, 49, -(_rowWidth*0.5), 2);
+    cell.large_Line.frame  = CGRectMake(_rowWidth, 49, -(_rowWidth*0.5), 3);
     cell.mid_Line.frame    = CGRectMake(_rowWidth, 0, -(_rowWidth*0.35), 1);
     
   }
@@ -137,12 +138,15 @@
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-
+  
   NSInteger currentRow =(int)(_tableView.contentOffset.y+(self.frame.size.width-_rowWidth)/2)/10;
   
-  [_delegate respondsToSelector:nil];
+  NSLog(@"%f",_tableView.contentOffset.y);
   
-  [self.delegate MNRulerPickerView:self didSelectRowAtIndexPath:[NSIndexPath indexPathForRow: currentRow inSection:0]];
+  
+  if([_delegate respondsToSelector:@selector(RulerViewDidScroll:currentValue:)]){
+    [self.delegate RulerViewDidScroll:self currentValue:currentRow+_minValue*10];
+  }
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {

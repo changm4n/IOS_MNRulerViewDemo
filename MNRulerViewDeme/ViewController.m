@@ -23,17 +23,16 @@
   _ruler.delegate = self;
   
   
-  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 30)];
+  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 3, 30)];
   view.backgroundColor = [UIColor redColor];
   view.alpha = 0.5;
   [_ruler setIndicatorView:view];
   // Do any additional setup after loading the view, typically from a nib.
 }
-- (void)MNRulerPickerView:(MNRulerView*)MNRulerPickerView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)RulerViewDidScroll:(MNRulerView *)MNRulerPickerView currentValue:(float)value{
   
   
-  _label.text = [NSString stringWithFormat:@"%0.1f cm",(float)indexPath.row/10];
-  
+  _label.text = [NSString stringWithFormat:@"%0.1f cm",value/10];
   
   
 }
