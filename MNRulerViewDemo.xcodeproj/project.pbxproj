@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37A80EAB1C33A7E600E66A30 /* MNRulerViewDeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNRulerViewDeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A80EAB1C33A7E600E66A30 /* MNRulerViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNRulerViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A80EAF1C33A7E600E66A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A80EB01C33A7E600E66A30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37A80EB21C33A7E600E66A30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		37A80EB91C33A7E600E66A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A80EBB1C33A7E600E66A30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37A80EBE1C33A7E600E66A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		37A80EC41C33A7E600E66A30 /* MNRulerViewDemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNRulerViewDemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A80EC41C33A7E600E66A30 /* MNRulerViewDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNRulerViewDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A80EC91C33A7E600E66A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A80ECA1C33A7E600E66A30 /* MNRulerViewDemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNRulerViewDemeTests.m; sourceTree = "<group>"; };
 		37A80ED51C33AAF400E66A30 /* MNRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNRulerView.h; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		37A80EAC1C33A7E600E66A30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37A80EAB1C33A7E600E66A30 /* MNRulerViewDeme.app */,
-				37A80EC41C33A7E600E66A30 /* MNRulerViewDemeTests.xctest */,
+				37A80EAB1C33A7E600E66A30 /* MNRulerViewDemo.app */,
+				37A80EC41C33A7E600E66A30 /* MNRulerViewDemo.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37A80EAA1C33A7E600E66A30 /* MNRulerViewDeme */ = {
+		37A80EAA1C33A7E600E66A30 /* MNRulerViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37A80ECE1C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDeme" */;
+			buildConfigurationList = 37A80ECE1C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemo" */;
 			buildPhases = (
 				37A80EA71C33A7E600E66A30 /* Sources */,
 				37A80EA81C33A7E600E66A30 /* Frameworks */,
@@ -157,14 +157,14 @@
 			);
 			dependencies = (
 			);
-			name = MNRulerViewDeme;
+			name = MNRulerViewDemo;
 			productName = MNRulerViewDeme;
-			productReference = 37A80EAB1C33A7E600E66A30 /* MNRulerViewDeme.app */;
+			productReference = 37A80EAB1C33A7E600E66A30 /* MNRulerViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		37A80EC31C33A7E600E66A30 /* MNRulerViewDemeTests */ = {
+		37A80EC31C33A7E600E66A30 /* MNRulerViewDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37A80ED11C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemeTests" */;
+			buildConfigurationList = 37A80ED11C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemoTests" */;
 			buildPhases = (
 				37A80EC01C33A7E600E66A30 /* Sources */,
 				37A80EC11C33A7E600E66A30 /* Frameworks */,
@@ -175,9 +175,9 @@
 			dependencies = (
 				37A80EC61C33A7E600E66A30 /* PBXTargetDependency */,
 			);
-			name = MNRulerViewDemeTests;
+			name = MNRulerViewDemoTests;
 			productName = MNRulerViewDemeTests;
-			productReference = 37A80EC41C33A7E600E66A30 /* MNRulerViewDemeTests.xctest */;
+			productReference = 37A80EC41C33A7E600E66A30 /* MNRulerViewDemo.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 37A80EA61C33A7E600E66A30 /* Build configuration list for PBXProject "MNRulerViewDeme" */;
+			buildConfigurationList = 37A80EA61C33A7E600E66A30 /* Build configuration list for PBXProject "MNRulerViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -211,8 +211,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37A80EAA1C33A7E600E66A30 /* MNRulerViewDeme */,
-				37A80EC31C33A7E600E66A30 /* MNRulerViewDemeTests */,
+				37A80EAA1C33A7E600E66A30 /* MNRulerViewDemo */,
+				37A80EC31C33A7E600E66A30 /* MNRulerViewDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,7 +264,7 @@
 /* Begin PBXTargetDependency section */
 		37A80EC61C33A7E600E66A30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37A80EAA1C33A7E600E66A30 /* MNRulerViewDeme */;
+			target = 37A80EAA1C33A7E600E66A30 /* MNRulerViewDemo */;
 			targetProxy = 37A80EC51C33A7E600E66A30 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -377,7 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MNRulerViewDeme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MNRulerViewDemo;
 			};
 			name = Debug;
 		};
@@ -387,7 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MNRulerViewDeme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MNRulerViewDemo;
 			};
 			name = Release;
 		};
@@ -405,8 +405,8 @@
 				);
 				INFOPLIST_FILE = MNRulerViewDemeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MNRulerViewDeme.app/MNRulerViewDeme";
+				PRODUCT_NAME = MNRulerViewDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MNRulerViewDemo.app/MNRulerViewDemo";
 			};
 			name = Debug;
 		};
@@ -420,15 +420,15 @@
 				);
 				INFOPLIST_FILE = MNRulerViewDemeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MNRulerViewDeme.app/MNRulerViewDeme";
+				PRODUCT_NAME = MNRulerViewDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MNRulerViewDemo.app/MNRulerViewDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37A80EA61C33A7E600E66A30 /* Build configuration list for PBXProject "MNRulerViewDeme" */ = {
+		37A80EA61C33A7E600E66A30 /* Build configuration list for PBXProject "MNRulerViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37A80ECC1C33A7E600E66A30 /* Debug */,
@@ -437,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37A80ECE1C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDeme" */ = {
+		37A80ECE1C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37A80ECF1C33A7E600E66A30 /* Debug */,
@@ -446,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37A80ED11C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemeTests" */ = {
+		37A80ED11C33A7E600E66A30 /* Build configuration list for PBXNativeTarget "MNRulerViewDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37A80ED21C33A7E600E66A30 /* Debug */,
