@@ -19,13 +19,15 @@
 -(instancetype)initWithFrame:(CGRect)frame{
   self = [super initWithFrame:frame];
   if (self) {
-    
     self.allowsSelection = NO;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
-//    self.bounces=NO;
+    
+    self.separatorStyle = UITableViewCellSeparatorStyleNone;
     
   }
+  
+  
   return self;
 }
 //

@@ -22,11 +22,15 @@
   
   _ruler.delegate = self;
   
-  
   UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 3, 30)];
   view.backgroundColor = [UIColor redColor];
   view.alpha = 0.5;
   [_ruler setIndicatorView:view];
+  
+
+  
+  
+  
   // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)RulerViewDidScroll:(MNRulerView *)MNRulerPickerView currentValue:(float)value{

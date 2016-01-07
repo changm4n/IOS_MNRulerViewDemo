@@ -39,25 +39,27 @@
   }
   _rowWidth = frame.size.height;
   
-  
   _tableView = [[MNRulerTableView alloc]initWithFrame:CGRectMake(w/2-h/2,h/2-w/2, h, w)];
   
-  
+  _tableView.delegate = self;
+  _tableView.dataSource = self;
+
   CGAffineTransform rotate = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(270));
   rotate = CGAffineTransformScale(rotate,1,1);
   [_tableView setTransform:rotate];
   
-  _tableView.delegate = self;
-  _tableView.dataSource = self;
-  
-  _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-  _tableView.backgroundColor = [UIColor orangeColor];
-  
   
   [self addSubview:_tableView];
   
+  
 }
-
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+  if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+    [tableView setSeparatorInset:UIEdgeInsetsZero];
+  }
+  
+}
 -(instancetype)initWithFrame:(CGRect)frame{
   self = [super initWithFrame:frame];
   if(self){
@@ -72,6 +74,7 @@
   
   if (self) {
     [self initInnerView:self.frame];
+    
   }
   
   return self;
@@ -113,7 +116,6 @@
   if(cell ==nil){
     cell = [[MNRulerTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
-    
     cell.label.frame = CGRectMake(_rowWidth*0.1,(_rowHeight-LABEL_SIZE)/2, LABEL_SIZE , LABEL_SIZE);
     
     
@@ -132,7 +134,7 @@
   }
   
   
-  cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.row + _minValue];
+  cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.row+_minValue];
   
   
   return cell;
