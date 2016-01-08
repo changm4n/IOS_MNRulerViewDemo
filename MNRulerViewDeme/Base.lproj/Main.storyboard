@@ -23,18 +23,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izK-PT-wfL" customClass="MNRulerView">
-                                <rect key="frame" x="0.0" y="284" width="320" height="100"/>
-                                <color key="backgroundColor" red="0.92549020049999997" green="0.5411764979" blue="0.22352941330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgu-ps-IBt" customClass="MNRulerView">
+                                <rect key="frame" x="20" y="340" width="280" height="100"/>
+                                <color key="backgroundColor" red="0.91764706370000004" green="0.3960784376" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <integer key="value" value="60"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="interval">
-                                        <integer key="value" value="1"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -44,11 +41,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="label" destination="gr2-JT-Rdf" id="l2J-Zq-nFC"/>
-                        <outlet property="ruler" destination="izK-PT-wfL" id="IQf-Ej-5i8"/>
+                        <outlet property="ruler" destination="Xgu-ps-IBt" id="Ch2-jY-LpI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="246"/>
         </scene>
     </scenes>
 </document>

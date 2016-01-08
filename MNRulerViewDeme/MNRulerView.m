@@ -43,21 +43,30 @@
   
   _tableView.delegate = self;
   _tableView.dataSource = self;
-
+  
+  
+  
+  
+  
   CGAffineTransform rotate = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(270));
   rotate = CGAffineTransformScale(rotate,1,1);
   [_tableView setTransform:rotate];
   
   
   [self addSubview:_tableView];
+  [_tableView reloadData];
   
   
 }
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+-(void)setMaxValue:(NSInteger)maxValue MinValue:(NSInteger)minValue{
+  _maxValue = maxValue;
+  _minValue = minValue;
   
-  if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-    [tableView setSeparatorInset:UIEdgeInsetsZero];
-  }
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+  [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
   
 }
 -(instancetype)initWithFrame:(CGRect)frame{

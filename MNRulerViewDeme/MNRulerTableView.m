@@ -9,11 +9,6 @@
 #import "MNRulerTableView.h"
 
 
-@interface MNRulerTableView (){
-  
-}
-
-@end
 @implementation MNRulerTableView
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -22,14 +17,17 @@
     self.allowsSelection = NO;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
-    
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    self.backgroundColor = [UIColor clearColor];
   }
   
   
   return self;
 }
+
+
+
+
 //
 
 

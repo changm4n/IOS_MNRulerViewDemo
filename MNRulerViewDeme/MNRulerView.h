@@ -26,7 +26,7 @@
 
 
 -(void)setIndicatorView:(UIView *)view;
-
+-(void)setMaxValue:(NSInteger)maxValue MinValue:(NSInteger)minValue;
 
 @property (nonatomic, weak) id <MNRulerViewDelegate> delegate;
 
