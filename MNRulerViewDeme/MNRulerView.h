@@ -27,7 +27,7 @@
 
 -(void)setIndicatorView:(UIView *)view;
 -(void)setMaxValue:(NSInteger)maxValue MinValue:(NSInteger)minValue;
-
+-(void)setBackgroundColorOfCell:(UIColor *)backgroundColor;
 @property (nonatomic, weak) id <MNRulerViewDelegate> delegate;
 
 

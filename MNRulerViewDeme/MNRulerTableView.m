@@ -14,16 +14,18 @@
 -(instancetype)initWithFrame:(CGRect)frame{
   self = [super initWithFrame:frame];
   if (self) {
+    self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.backgroundColor = [UIColor clearColor];
     self.allowsSelection = NO;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
-    self.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.backgroundColor = [UIColor clearColor];
   }
   
   
   return self;
 }
+
+
 
 
 

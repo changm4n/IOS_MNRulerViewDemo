@@ -18,7 +18,7 @@
   
   if (self) {
     
-    self.backgroundColor = [UIColor grayColor];
+//    self.backgroundColor = [UIColor grayColor];
 
     ///////////Label///////////
     ///////////////////////////

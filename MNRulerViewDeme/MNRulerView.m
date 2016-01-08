@@ -23,6 +23,7 @@
 
 @property (nonatomic) float rowHeight;
 @property (nonatomic) float rowWidth;
+@property (nonatomic, weak) UIColor *cells;
 
 @property (nonatomic, strong) MNRulerTableView *tableView;
 
@@ -53,21 +54,27 @@
   [_tableView setTransform:rotate];
   
   
+  
   [self addSubview:_tableView];
+  [_tableView setNeedsDisplay];
   [_tableView reloadData];
   
   
 }
 
-
+-(void)setBackgroundColorOfCell:(UIColor *)backgroundColor{
+  _cells = backgroundColor;
+}
 -(void)setMaxValue:(NSInteger)maxValue MinValue:(NSInteger)minValue{
   _maxValue = maxValue;
   _minValue = minValue;
   
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-  [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
   
+
+  [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+  [tableView setSeparatorInset:UIEdgeInsetsZero];
 }
 -(instancetype)initWithFrame:(CGRect)frame{
   self = [super initWithFrame:frame];
@@ -139,12 +146,14 @@
     
     cell.large_Line.frame  = CGRectMake(_rowWidth, 49, -(_rowWidth*0.5), 3);
     cell.mid_Line.frame    = CGRectMake(_rowWidth, 0, -(_rowWidth*0.35), 1);
+   
     
+    
+    cell.backgroundColor = _cells;
   }
   
   
   cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.row+_minValue];
-  
   
   return cell;
 }
