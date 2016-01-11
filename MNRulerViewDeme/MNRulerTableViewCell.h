@@ -28,5 +28,14 @@
 @property (nonatomic, strong) UIView *mid_Line;
 @property (nonatomic, strong) UIView *large_Line;
 
+
+@property (nonatomic, strong) UIColor *color_of_cells;
+@property (nonatomic, strong) UIColor *color_of_label;
+@property (nonatomic, strong) UIColor *color_of_line;
+
+-(void)setBackgroundColorOfCell:(UIColor *)backgroundColor;
+-(void)setBackgroundColorOfLine:(UIColor *)backgroundColor;
+-(void)setBackgroundColorOfLabel:(UIColor *)backgroundColor;
+
 @property (nonatomic) float height;
 @end

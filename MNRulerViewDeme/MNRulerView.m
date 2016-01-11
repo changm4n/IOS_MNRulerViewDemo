@@ -23,7 +23,9 @@
 
 @property (nonatomic) float rowHeight;
 @property (nonatomic) float rowWidth;
-@property (nonatomic, weak) UIColor *cells;
+@property (nonatomic, weak) UIColor *color_of_cells;
+@property (nonatomic, weak) UIColor *color_of_label;
+@property (nonatomic, weak) UIColor *color_of_line;
 
 @property (nonatomic, strong) MNRulerTableView *tableView;
 
@@ -63,19 +65,27 @@
 }
 
 -(void)setBackgroundColorOfCell:(UIColor *)backgroundColor{
-  _cells = backgroundColor;
+  _color_of_cells = backgroundColor;
 }
+-(void)setBackgroundColorOfLabel:(UIColor *)backgroundColor{
+  _color_of_label = backgroundColor;
+}
+-(void)setBackgroundColorOfLine:(UIColor *)backgroundColor{
+  _color_of_line = backgroundColor;
+}
+
 -(void)setMaxValue:(NSInteger)maxValue MinValue:(NSInteger)minValue{
   _maxValue = maxValue;
   _minValue = minValue;
   
 }
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-  
-
-  [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-  [tableView setSeparatorInset:UIEdgeInsetsZero];
-}
+//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//  
+//
+//  [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//  [tableView setSeparatorInset:UIEdgeInsetsZero];
+//  
+//}
 -(instancetype)initWithFrame:(CGRect)frame{
   self = [super initWithFrame:frame];
   if(self){
@@ -121,7 +131,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-  return _maxValue - _minValue;
+  
+  if (_maxValue&& _minValue) {
+    return _maxValue - _minValue;
+  }else{
+    return 10;
+  }
+  
+  
+  
   
 }
 
@@ -149,8 +167,13 @@
    
     
     
-    cell.backgroundColor = _cells;
+    if(_color_of_line != nil)
+      [cell setBackgroundColorOfLine:_color_of_line];
+    
+    if(_color_of_cells != nil)
+      [cell setBackgroundColorOfCell:_color_of_cells];
   }
+  
   
   
   cell.label.text = [NSString stringWithFormat:@"%ld",indexPath.row+_minValue];

@@ -18,8 +18,8 @@
   
   if (self) {
     
-//    self.backgroundColor = [UIColor grayColor];
-
+    
+    
     ///////////Label///////////
     ///////////////////////////
     _label = [[UILabel alloc]init];
@@ -32,8 +32,13 @@
     rotate = CGAffineTransformScale(rotate,1,1);
     [_label setTransform:rotate];
     [self addSubview:_label];
+    
     ///////////////////////////
     ///////////////////////////
+    
+    
+    
+    
     
     ///////////Lines///////////
     ///////////////////////////
@@ -70,12 +75,32 @@
     ///////////////////////////
     
     
+    self.backgroundColor = [UIColor orangeColor];
     
     
     
   }
   return self;
 }
+
+
+-(void)setBackgroundColorOfCell:(UIColor *)backgroundColor{
+  self.backgroundColor = backgroundColor;
+  
+}
+-(void)setBackgroundColorOfLine:(UIColor *)backgroundColor{
+  NSMutableArray *array = [[NSMutableArray alloc]initWithObjects:_small_Line1,_small_Line2,_small_Line3,_small_Line4,_small_Line5,_small_Line6,_small_Line7,_small_Line8,_mid_Line,_large_Line ,nil];
+  
+  [array enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
+    
+    obj.backgroundColor = backgroundColor;
+    [self addSubview:obj];
+    
+  }];
+
+  
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
   [super setSelected:selected animated:animated];

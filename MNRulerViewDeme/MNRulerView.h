@@ -19,6 +19,9 @@
 -(void)RulerViewDidScroll:(MNRulerView*)MNRulerPickerView currentValue:(float)value;
 -(CGFloat)rowHeightForMNRulerPickerView:(MNRulerView*)MNRulerPickerView;
 
+@required
+
+
 @end
 
 @interface MNRulerView : UIView
@@ -27,7 +30,10 @@
 
 -(void)setIndicatorView:(UIView *)view;
 -(void)setMaxValue:(NSInteger)maxValue MinValue:(NSInteger)minValue;
+
 -(void)setBackgroundColorOfCell:(UIColor *)backgroundColor;
+-(void)setBackgroundColorOfLine:(UIColor *)backgroundColor;
+-(void)setBackgroundColorOfLabel:(UIColor *)backgroundColor;
 @property (nonatomic, weak) id <MNRulerViewDelegate> delegate;
 
 

@@ -23,16 +23,17 @@
   view.backgroundColor = [UIColor redColor];
   view.alpha = 0.5;
   
-  _ruler.delegate = self;
-  [_ruler setBackgroundColorOfCell:[UIColor blackColor]];
-  [_ruler setIndicatorView:view];
   
 
-  MNRulerView *vc2 = [[MNRulerView alloc]initWithFrame:CGRectMake(0, 60, 320, 70)];
+  MNRulerView *vc2 = [[MNRulerView alloc]initWithFrame:CGRectMake(0, 60, 320, 100)];
   vc2.delegate = self;
-  [vc2 setMaxValue:30 MinValue:10];
-  [vc2 setBackgroundColorOfCell:[UIColor redColor]];
-//  [vc2 setIndicatorView:view];
+//  [vc2 setMaxValue:30 MinValue:10];
+//  [vc2 setBackgroundColorOfCell:[UIColor blueColor]];
+  [vc2 setBackgroundColorOfLine:[UIColor whiteColor]];
+  [vc2 setIndicatorView:view];
+  
+  
+  
   [self.view addSubview:vc2];
   
   
